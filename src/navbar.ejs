@@ -1,15 +1,17 @@
 <nav>
   <div class="logo"><%= t.title %></div>
-  <a href="/<%= language %>#series"><%= t.series %></a>
-  <a href="/<%= language %>#about"><%= t.about %></a>
-  <details class="lang-select">
-    <summary>
-      <%- include("../translations/flags/" + language + ".svg") %>
-    </summary>
-    <ul>
-      <% for (const [other_language, other_t] of translations) { %>
-      <li><a href="/<%= other_language %>"><%= other_t.language %></a></li>
-      <% } %>
-    </ul>
-  </details>
+  <div class="links">
+    <a href="/<%= language %>#series"><%= t.series %></a>
+    <a href="/<%= language %>#about"><%= t.about %></a>
+    <details class="lang-select">
+      <summary>
+        <%- include("../translations/flags/" + language + ".svg") %>
+      </summary>
+      <ul>
+        <% for (const [other_language, other_t] of translations) { %>
+        <li><a href="/<%= other_language %>"><%= other_t.language %></a></li>
+        <% } %>
+      </ul>
+    </details>
+  </div>
 </nav>

@@ -33,44 +33,54 @@ nav {
   z-index: 2; /* Appear above carousel controls */
 
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
   gap: 30px;
   padding: 0 30px;
 
   > .logo {
-    flex-grow: 1;
+    flex: 1 0 auto;
     font-size: 20px;
   }
   a {
     color: var(--fg);
     text-decoration: none;
   }
-  > details {
-    margin: 0;
-    padding: 0;
+  > .links {
+    flex-grow: 1;
 
-    > summary {
-      > svg {
-        vertical-align: middle;
-        width: auto;
-        height: 1em;
-      }
-    }
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px 30px;
+    justify-content: end;
 
-    > ul {
-      position: fixed;
-      z-index: 1; /* Appear above the wave */
-      right: 0;
-
+    > details {
       margin: 0;
       padding: 0;
 
-      list-style-type: none;
-      background: var(--lime-cream);
+      > summary {
+        > svg {
+          vertical-align: middle;
+          width: auto;
+          height: 1em;
+        }
+      }
 
-      > li {
-        margin: 20px;
+      > ul {
+        position: fixed;
+        z-index: 1; /* Appear above the wave */
+        top: var(--nav-content-height);
+        right: 0;
+
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+        background: var(--lime-cream);
+
+        > li {
+          margin: 20px;
+        }
       }
     }
   }
@@ -109,7 +119,7 @@ section {
   --bg-color: color-mix(in oklab, var(--border-color), white 95%);
   width: round(down, 100%, var(--border-size));
   max-width: calc(var(--border-size) * 8);
-  padding: calc(var(--border-size) * 0.7);
+  padding: calc(var(--border-size) * 0.7) calc(var(--border-size) * 0.5);
   margin: 80px auto var(--border-size) auto;
   position: relative;
 
