@@ -5,7 +5,7 @@ import.meta.glob("../assets/**");
 
 {
   const nav_details = [
-    ...document.querySelectorAll("nav > details"),
+    ...document.querySelectorAll("nav details"),
   ] as HTMLDetailsElement[];
   addEventListener("click", (e) => {
     if (e.target instanceof Node) {
