@@ -5,7 +5,7 @@ import { pluginEjs } from "rsbuild-plugin-ejs";
 
 const translations: Map<string, any> = new Map();
 for (const file of (await fs.readdir("translations")).sort()) {
-  if (!file.endsWith(".ts")) {
+  if (file.length !== 5 || !file.endsWith(".ts")) {
     continue;
   }
   const mod = await import(`./translations/${file}`);

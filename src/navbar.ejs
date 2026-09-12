@@ -1,7 +1,7 @@
 <nav>
   <div class="logo"><%= t.title %></div>
-  <a href="/<%= language %>#series">Series</a>
-  <a href="/<%= language %>#about">About</a>
+  <a href="/<%= language %>#series"><%= t.series %></a>
+  <a href="/<%= language %>#about"><%= t.about %></a>
   <details class="lang-select">
     <summary>
       <%- include("../translations/flags/" + language + ".svg") %>
