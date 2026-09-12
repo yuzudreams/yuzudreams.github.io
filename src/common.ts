@@ -4,15 +4,13 @@ import "./common.css";
 import.meta.glob("../assets/**");
 
 {
-  const nav_details = [
-    ...document.querySelectorAll("nav details"),
-  ] as HTMLDetailsElement[];
+  const nav_details = document.querySelector(
+    "nav .lang-select",
+  ) as HTMLDetailsElement;
   addEventListener("click", (e) => {
     if (e.target instanceof Node) {
-      for (const details of nav_details) {
-        if (!details.contains(e.target)) {
-          details.open = false;
-        }
+      if (!nav_details.contains(e.target)) {
+        nav_details.open = false;
       }
     }
   });

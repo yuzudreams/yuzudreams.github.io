@@ -84,205 +84,220 @@
       </div>
     </header>
 
-    <section id="series">
-      <%- include("section.ejs") %>
+    <main>
+      <section id="series">
+        <%- include("section.ejs") %>
 
-      <h2><%= t.series %></h2>
+        <h2><%= t.series %></h2>
 
-      <% const all_images = []; %>
+        <% const all_images = []; %>
 
-      <div class="card" id="asuka-and-misaki">
-        <%- include("preview.ejs", { dir: "Asuka and Misaki", all_images }) %>
-        <div>
-          <h3><%= t.asuka_and_misaki.name %></h3>
-          <div class="info">
-            <%= t.by %><a href="https://www.pixiv.net/en/users/16115437">
-              <%= t.anjinneko %>
-            </a>
-            •
-            <%= t.coming_soon %>
+        <div class="card" id="asuka-and-misaki">
+          <%- include("preview.ejs", { dir: "Asuka and Misaki", all_images }) %>
+          <div>
+            <h3><%= t.asuka_and_misaki.name %></h3>
+            <div class="info">
+              <%= t.by %><a href="https://www.pixiv.net/en/users/16115437">
+                <%= t.anjinneko %>
+              </a>
+              •
+              <%= t.coming_soon %>
+            </div>
+            <p>
+              <a href="https://x.com/Anjinneko57931/status/2095632937979179198">
+                <%= t.asuka_and_misaki.released %>
+              </a>
+            </p>
           </div>
-          <p>
-            <a href="https://x.com/Anjinneko57931/status/2095632937979179198">
-              <%= t.asuka_and_misaki.released %>
-            </a>
-          </p>
+        </div>
+
+        <div class="card" id="ame-nochi-yuki">
+          <%- include("preview.ejs", { dir: "Ame nochi Yuki", all_images }) %>
+          <div>
+            <h3><%= t.ame_nochi_yuki.name %></h3>
+            <div class="info">
+              <%= t.by %><a href="https://sirainu.fanbox.cc/">
+                <%= t.shirainu %>
+              </a>
+              • 2025-12-11–
+            </div>
+            <p>
+              <a href="https://www.pixiv.net/user/122109038/series/315614">
+                pixiv
+              </a>
+              •
+              <a href="https://sirainu.fanbox.cc/">Fanbox</a>
+            </p>
+            <p><%= t.ame_nochi_yuki.available %></p>
+          </div>
+        </div>
+
+        <div class="card" id="blooddiary0">
+          <%- include("preview.ejs", { dir: "Yaya/BLOODDIARY0", all_images }) %>
+          <div>
+            <h3><%= t.blooddiary0 %></h3>
+            <div class="info">
+              <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
+                <%= t.yaya %>
+              </a>
+              • 2025-10-28
+            </div>
+            <p>
+              <a href="https://yayasama100lovex.booth.pm/items/7587492"
+                >Booth</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="card" id="devils-lover-1">
+          <%- include("preview.ejs", { dir: "Yaya/Devil_s Lover 1", all_images
+          }) %>
+          <div>
+            <h3><%= t.devils_lover_1 %></h3>
+            <div class="info">
+              <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
+                <%= t.yaya %>
+              </a>
+              • 2025-11-04
+            </div>
+            <p>
+              <a href="https://yayasama100lovex.booth.pm/items/7617747"
+                >Booth</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="card" id="devils-lover-2">
+          <%- include("preview.ejs", { dir: "Yaya/Devil_s Lover 2", all_images
+          }) %>
+          <div>
+            <h3><%= t.devils_lover_2 %></h3>
+            <div class="info">
+              <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
+                <%= t.yaya %>
+              </a>
+              • 2026-04-03
+            </div>
+            <p>
+              <a href="https://yayasama100lovex.booth.pm/items/8158971"
+                >Booth</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="card" id="lonely-lose">
+          <%- include("preview.ejs", { dir: "Yaya/Lonely Lose", all_images }) %>
+          <div>
+            <h3><%= t.lonely_lose %></h3>
+            <div class="info">
+              <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
+                <%= t.yaya %>
+              </a>
+              • 2026-03-18
+            </div>
+            <p>
+              <a href="https://yayasama100lovex.booth.pm/items/8094931"
+                >Booth</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="card" id="the-secret-sleepover">
+          <%- include("preview.ejs", { dir: "Yaya/The Secret Sleepover",
+          all_images }) %>
+          <div>
+            <h3><%= t.the_secret_sleepover %></h3>
+            <div class="info">
+              <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
+                <%= t.yaya %>
+              </a>
+              • 2026-03-09
+            </div>
+            <p>
+              <a href="https://yayasama100lovex.booth.pm/items/8067510"
+                >Booth</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="card" id="wanting-more">
+          <%- include("preview.ejs", { dir: "Yaya/Wanting More", all_images })
+          %>
+          <div>
+            <h3><%= t.wanting_more %></h3>
+            <div class="info">
+              <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
+                <%= t.yaya %>
+              </a>
+              • 2026-06-17
+            </div>
+            <p>
+              <a href="https://yayasama100lovex.booth.pm/items/8517923"
+                >Booth</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div id="fullscreen" class="splide" role="group">
+        <button class="fullscreen">
+          <%- include("svg/fullscreen-exit.svg") %>
+        </button>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <% for (const img of all_images) { %>
+            <li class="splide__slide">
+              <img src="<%= img %>" />
+            </li>
+            <% } %>
+          </ul>
         </div>
       </div>
 
-      <div class="card" id="ame-nochi-yuki">
-        <%- include("preview.ejs", { dir: "Ame nochi Yuki", all_images }) %>
-        <div>
-          <h3><%= t.ame_nochi_yuki.name %></h3>
-          <div class="info">
-            <%= t.by %><a href="https://sirainu.fanbox.cc/">
-              <%= t.shirainu %>
-            </a>
-            • 2025-12-11–
-          </div>
-          <p>
-            <a href="https://www.pixiv.net/user/122109038/series/315614">
-              pixiv
-            </a>
-            •
-            <a href="https://sirainu.fanbox.cc/">Fanbox</a>
-          </p>
-          <p><%= t.ame_nochi_yuki.available %></p>
-        </div>
-      </div>
+      <section id="about">
+        <%- include("section.ejs") %>
 
-      <div class="card" id="blooddiary0">
-        <%- include("preview.ejs", { dir: "Yaya/BLOODDIARY0", all_images }) %>
-        <div>
-          <h3><%= t.blooddiary0 %></h3>
-          <div class="info">
-            <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
-              <%= t.yaya %>
-            </a>
-            • 2025-10-28
-          </div>
-          <p>
-            <a href="https://yayasama100lovex.booth.pm/items/7587492">Booth</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="card" id="devils-lover-1">
-        <%- include("preview.ejs", { dir: "Yaya/Devil_s Lover 1", all_images })
-        %>
-        <div>
-          <h3><%= t.devils_lover_1 %></h3>
-          <div class="info">
-            <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
-              <%= t.yaya %>
-            </a>
-            • 2025-11-04
-          </div>
-          <p>
-            <a href="https://yayasama100lovex.booth.pm/items/7617747">Booth</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="card" id="devils-lover-2">
-        <%- include("preview.ejs", { dir: "Yaya/Devil_s Lover 2", all_images })
-        %>
-        <div>
-          <h3><%= t.devils_lover_2 %></h3>
-          <div class="info">
-            <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
-              <%= t.yaya %>
-            </a>
-            • 2026-04-03
-          </div>
-          <p>
-            <a href="https://yayasama100lovex.booth.pm/items/8158971">Booth</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="card" id="lonely-lose">
-        <%- include("preview.ejs", { dir: "Yaya/Lonely Lose", all_images }) %>
-        <div>
-          <h3><%= t.lonely_lose %></h3>
-          <div class="info">
-            <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
-              <%= t.yaya %>
-            </a>
-            • 2026-03-18
-          </div>
-          <p>
-            <a href="https://yayasama100lovex.booth.pm/items/8094931">Booth</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="card" id="the-secret-sleepover">
-        <%- include("preview.ejs", { dir: "Yaya/The Secret Sleepover",
-        all_images }) %>
-        <div>
-          <h3><%= t.the_secret_sleepover %></h3>
-          <div class="info">
-            <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
-              <%= t.yaya %>
-            </a>
-            • 2026-03-09
-          </div>
-          <p>
-            <a href="https://yayasama100lovex.booth.pm/items/8067510">Booth</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="card" id="wanting-more">
-        <%- include("preview.ejs", { dir: "Yaya/Wanting More", all_images }) %>
-        <div>
-          <h3><%= t.wanting_more %></h3>
-          <div class="info">
-            <%= t.by %><a href="https://www.pixiv.net/en/users/43729036">
-              <%= t.yaya %>
-            </a>
-            • 2026-06-17
-          </div>
-          <p>
-            <a href="https://yayasama100lovex.booth.pm/items/8517923">Booth</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div id="fullscreen" class="splide" role="group">
-      <button class="fullscreen">
-        <%- include("svg/fullscreen-exit.svg") %>
-      </button>
-      <div class="splide__track">
-        <ul class="splide__list">
-          <% for (const img of all_images) { %>
-          <li class="splide__slide">
-            <img src="<%= img %>" />
-          </li>
-          <% } %>
-        </ul>
-      </div>
-    </div>
-
-    <section id="about">
-      <%- include("section.ejs") %>
-
-      <h2><%= t.about %></h2>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-      <p>Lorem</p>
-    </section>
+        <h2><%= t.about %></h2>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+      </section>
+    </main>
   </body>
 </html>

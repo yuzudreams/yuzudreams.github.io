@@ -104,92 +104,173 @@ header {
   scroll-margin-top: calc(var(--nav-height) + 10px);
 }
 
-section {
-  h2 {
-    margin-top: 0px;
-    font-size: 1.8em;
-  }
-  h3 {
-    font-size: 1.5em;
-  }
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 
-  --border-size: 100px;
-  --border-repeats: 10;
-  --border-color: var(--powder-blush);
-  --bg-color: color-mix(in oklab, var(--border-color), white 95%);
-  width: round(down, 100%, var(--border-size));
-  max-width: calc(var(--border-size) * 8);
-  padding: calc(var(--border-size) * 0.7) calc(var(--border-size) * 0.5);
-  margin: 80px auto var(--border-size) auto;
-  position: relative;
-
-  > .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: round(up, 100%, var(--border-size));
-    z-index: -1;
-
-    &::before {
-      content: "";
-      position: absolute;
-      --margin: calc(var(--border-size) * 0.12);
-      top: var(--margin);
-      left: var(--margin);
-      width: calc(100% - 2 * var(--margin));
-      height: calc(100% - 2 * var(--margin));
-      background: var(--bg-color);
-      border-radius: calc(var(--border-size) * 0.9);
+  > section {
+    h2 {
+      margin-top: 0px;
+      font-size: 1.8em;
+    }
+    h3 {
+      font-size: 1.5em;
     }
 
-    &::after {
-      content: "";
+    --border-size: 100px;
+    --border-repeats: 10;
+    --border-color: var(--powder-blush);
+    --bg-color: color-mix(in oklab, var(--border-color), white 95%);
+    width: round(down, 100%, var(--border-size));
+    max-width: calc(var(--border-size) * 8);
+    padding: calc(var(--border-size) * 0.7) calc(var(--border-size) * 0.5);
+    margin: 80px 0 var(--border-size) 0;
+    position: relative;
+
+    > .bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background: var(--border-color);
-      mask:
-        url("svg/corner/0.svg") no-repeat top left / var(--border-size)
-          var(--border-size),
-        url("svg/corner/1.svg") no-repeat top right / var(--border-size)
-          var(--border-size),
-        url("svg/corner/2.svg") no-repeat bottom right / var(--border-size)
-          var(--border-size),
-        url("svg/corner/3.svg") no-repeat bottom left / var(--border-size)
-          var(--border-size);
+      height: round(up, 100%, var(--border-size));
+      z-index: -1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        --margin: calc(var(--border-size) * 0.12);
+        top: var(--margin);
+        left: var(--margin);
+        width: calc(100% - 2 * var(--margin));
+        height: calc(100% - 2 * var(--margin));
+        background: var(--bg-color);
+        border-radius: calc(var(--border-size) * 0.9);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--border-color);
+        mask:
+          url("svg/corner/0.svg") no-repeat top left / var(--border-size)
+            var(--border-size),
+          url("svg/corner/1.svg") no-repeat top right / var(--border-size)
+            var(--border-size),
+          url("svg/corner/2.svg") no-repeat bottom right / var(--border-size)
+            var(--border-size),
+          url("svg/corner/3.svg") no-repeat bottom left / var(--border-size)
+            var(--border-size);
+      }
+
+      > .v-edge {
+        position: absolute;
+        top: 0;
+        left: var(--border-size);
+        width: calc(100% - 2 * var(--border-size));
+        height: 100%;
+
+        background: var(--border-color);
+        mask:
+          url("svg/edge/0.svg") repeat-x top left /
+            calc(var(--border-repeats) * var(--border-size)) var(--border-size),
+          url("svg/edge/2.svg") repeat-x bottom left /
+            calc(var(--border-repeats) * var(--border-size)) var(--border-size);
+      }
+
+      > .h-edge {
+        position: absolute;
+        top: var(--border-size);
+        left: 0;
+        width: 100%;
+        height: calc(100% - 2 * var(--border-size));
+
+        background: var(--border-color);
+        mask:
+          url("svg/edge/3.svg") repeat-y top left / var(--border-size)
+            calc(var(--border-repeats) * var(--border-size)),
+          url("svg/edge/1.svg") repeat-y top right / var(--border-size)
+            calc(var(--border-repeats) * var(--border-size));
+      }
+
+      > .rhs {
+        display: none;
+      }
     }
 
-    > .v-edge {
-      position: absolute;
-      top: 0;
-      left: var(--border-size);
-      width: calc(100% - 2 * var(--border-size));
-      height: 100%;
+    @media (width >= 1200px) {
+      margin-right: 300px;
 
-      background: var(--border-color);
-      mask:
-        url("svg/edge/0.svg") repeat-x top left /
-          calc(var(--border-repeats) * var(--border-size)) var(--border-size),
-        url("svg/edge/2.svg") repeat-x bottom left /
-          calc(var(--border-repeats) * var(--border-size)) var(--border-size);
-    }
+      > .bg > .rhs {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100%;
 
-    > .h-edge {
-      position: absolute;
-      top: var(--border-size);
-      left: 0;
-      width: 100%;
-      height: calc(100% - 2 * var(--border-size));
+        > div {
+          position: sticky;
+          top: var(--nav-height);
+          left: 0;
+          width: 100%;
+          height: 420px;
 
-      background: var(--border-color);
-      mask:
-        url("svg/edge/3.svg") repeat-y top left / var(--border-size)
-          calc(var(--border-repeats) * var(--border-size)),
-        url("svg/edge/1.svg") repeat-y top right / var(--border-size)
-          calc(var(--border-repeats) * var(--border-size));
+          > .bubble {
+            position: absolute;
+            width: var(--border-size);
+            height: var(--border-size);
+            &::before,
+            &::after {
+              content: "";
+            }
+            &::before {
+              background: var(--bg-color);
+              display: block;
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+            &::after {
+              background: var(--border-color);
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+            &.small {
+              top: 150px;
+              right: 50px;
+              padding: 33px 33px;
+              &::after {
+                mask: url("svg/small-bubble.svg") no-repeat 0 0 / 100% 100%;
+              }
+            }
+            &.big {
+              top: 60px;
+              right: 180px;
+              padding: 2px 13px;
+              &::before {
+                rotate: 30deg;
+              }
+              &::after {
+                mask: url("svg/big-bubble.svg") no-repeat 0 0 / 100% 100%;
+              }
+            }
+          }
+          > img {
+            position: absolute;
+            width: 220px;
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
     }
   }
 }

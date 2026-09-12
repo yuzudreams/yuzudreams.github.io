@@ -4,7 +4,7 @@ from pathlib import Path
 import random
 
 kr = krita.Krita.instance()
-doc = kr.activeDocument()
+doc = next(d for d in kr.documents() if d.fileName().endswith("border.kra"))
 dir = Path(doc.fileName()).parent
 corner = doc.nodeByName("corner")
 edge = doc.nodeByName("edge")
@@ -46,3 +46,9 @@ for i in range(4):
     path = edge_dir / f"{i}.svg"
     path.write_text(svg_el.toxml())
     print(f"Written {path}")
+    
+small_bubble = doc.nodeByName("small bubble")
+big_bubble = doc.nodeByName("big bubble")
+(dir / "small-bubble.svg").write_text(small_bubble.toSvg())
+(dir / "big-bubble.svg").write_text(big_bubble.toSvg())
+print(f"Written small-bubble.svg and big-bubble.svg")
