@@ -48,8 +48,17 @@ import Splide from "@splidejs/splide";
     });
 
   addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && fullscreen_div.classList.contains("shown")) {
-      exit_fullscreen();
+    if (!fullscreen_div.classList.contains("shown")) return;
+    switch (e.key) {
+      case "Escape":
+        exit_fullscreen();
+        break;
+      case "ArrowLeft":
+        fullscreen_splide.go("<");
+        break;
+      case "ArrowRight":
+        fullscreen_splide.go(">");
+        break;
     }
   });
 
