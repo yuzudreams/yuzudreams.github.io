@@ -6,7 +6,7 @@
   <button class="fullscreen"><%- include("svg/fullscreen.svg") %></button>
   <div class="splide__track">
     <ul class="splide__list">
-      <% for (const img of assetsIn(dir)) { %>
+      <% for (const img of assetsIn("assets/" + dir)) { %>
       <li class="splide__slide">
         <img src="<%= img %>" />
       </li>

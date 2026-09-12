@@ -20,32 +20,63 @@
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
-                <a href="#asuka-and-misaki">
-                  <img
-                    src="<%= asset('assets/Asuka and Misaki/cover.jpg') %>"
-                  />
-                </a>
+                <div>
+                  <a href="#asuka-and-misaki">
+                    <img
+                      src="<%= asset('assets/Asuka and Misaki/cover.jpg') %>"
+                    />
+                  </a>
+                </div>
               </li>
               <li class="splide__slide">
-                <a href="#ame-nochi-yuki">
-                  <img
-                    src="<%= asset('assets/Ame nochi Yuki/Ch2p01.webp') %>"
-                  />
-                </a>
+                <div>
+                  <a href="#ame-nochi-yuki">
+                    <img
+                      src="<%= asset('assets/Ame nochi Yuki/Ch2p01.webp') %>"
+                    />
+                  </a>
+                  <div class="icons">
+                    <a
+                      href="https://www.pixiv.net/user/122109038/series/315614"
+                    >
+                      <%- include("../assets/logo/pixiv-r.svg") %>
+                    </a>
+                    <a href="https://sirainu.fanbox.cc/">
+                      <img
+                        src="<%= asset('assets/logo/fanbox.webp') %>"
+                        alt="pixivFANBOX"
+                      />
+                    </a>
+                  </div>
+                </div>
               </li>
               <li class="splide__slide">
-                <a href="#blooddiary0">
-                  <img
-                    src="<%= asset('assets/Yaya/BLOODDIARY0/ch0p01.webp') %>"
-                  />
-                </a>
+                <div>
+                  <a href="#blooddiary0">
+                    <img
+                      src="<%= asset('assets/Yaya/BLOODDIARY0/ch0p01.webp') %>"
+                    />
+                  </a>
+                  <div class="icons">
+                    <a href="https://yayasama100lovex.booth.pm/items/7587492">
+                      <%- include("../assets/logo/booth_logo_icon.svg") %>
+                    </a>
+                  </div>
+                </div>
               </li>
               <li class="splide__slide">
-                <a href="#the-secret-sleepover">
-                  <img
-                    src="<%= asset('assets/Yaya/The Secret Sleepover/Ch1p01.webp') %>"
-                  />
-                </a>
+                <div>
+                  <a href="#the-secret-sleepover">
+                    <img
+                      src="<%= asset('assets/Yaya/The Secret Sleepover/Ch1p01.webp') %>"
+                    />
+                  </a>
+                  <div class="icons">
+                    <a href="https://yayasama100lovex.booth.pm/items/8067510">
+                      <%- include("../assets/logo/booth_logo_icon.svg") %>
+                    </a>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -60,53 +91,145 @@
 
       <% const all_images = []; %>
 
-      <h3 id="asuka-and-misaki">Asuka and Misaki</h3>
-      <%- include("preview.ejs", { dir: "assets/Asuka and Misaki", all_images }) %>
-      <p>Lorem</p>
+      <div class="card" id="asuka-and-misaki">
+        <%- include("preview.ejs", { dir: "Asuka and Misaki", all_images }) %>
+        <div>
+          <h3>Asuka and Misaki</h3>
+          <div class="info">
+            By <a href="https://www.pixiv.net/en/users/16115437">Anjinneko</a> •
+            Coming soon!
+          </div>
+          <p>
+            <a href="https://x.com/Anjinneko57931/status/2095632937979179198"
+              >To be released in October!</a
+            >
+          </p>
+        </div>
+      </div>
 
-      <h3 id="ame-nochi-yuki">Ame nochi Yuki</h3>
-      <%- include("preview.ejs", { dir: "assets/Ame nochi Yuki", all_images }) %>
-      <p>Lorem</p>
+      <div class="card" id="ame-nochi-yuki">
+        <%- include("preview.ejs", { dir: "Ame nochi Yuki", all_images }) %>
+        <div>
+          <h3>Ame nochi Yuki</h3>
+          <div class="info">
+            By <a href="https://sirainu.fanbox.cc/">Shirainu</a> • 2025-12-11–
+          </div>
+          <p>
+            <a href="https://www.pixiv.net/user/122109038/series/315614"
+              >Pixiv</a
+            >
+            •
+            <a href="https://sirainu.fanbox.cc/">Fanbox</a>
+          </p>
+          <p>
+            Chapters are available on Fanbox 1 month before being released for
+            free on Pixiv.
+          </p>
+        </div>
+      </div>
 
-      <h3 id="blooddiary0">BLOODDIARY0</h3>
-      <%- include("preview.ejs", { dir: "assets/Yaya/BLOODDIARY0", all_images }) %>
-      <p>Lorem</p>
+      <div class="card" id="blooddiary0">
+        <%- include("preview.ejs", { dir: "Yaya/BLOODDIARY0", all_images }) %>
+        <div>
+          <h3>BLOODDIARY0</h3>
+          <div class="info">
+            By <a href="https://www.pixiv.net/en/users/43729036">Yaya</a> •
+            2025-10-28
+          </div>
+          <p>
+            <a href="https://yayasama100lovex.booth.pm/items/7587492">Booth</a>
+          </p>
+        </div>
+      </div>
 
-      <h3 id="devils-lover-1">Devil’s Lover 1</h3>
-      <%- include("preview.ejs", { dir: "assets/Yaya/Devil_s Lover 1", all_images }) %>
-      <p>Lorem</p>
+      <div class="card" id="devils-lover-1">
+        <%- include("preview.ejs", { dir: "Yaya/Devil_s Lover 1", all_images })
+        %>
+        <div>
+          <h3>Devil’s Lover 1</h3>
+          <div class="info">
+            By <a href="https://www.pixiv.net/en/users/43729036">Yaya</a> •
+            2025-11-04
+          </div>
+          <p>
+            <a href="https://yayasama100lovex.booth.pm/items/7617747">Booth</a>
+          </p>
+        </div>
+      </div>
 
-      <h3 id="devils-lover-2">Devil’s Lover 2</h3>
-      <%- include("preview.ejs", { dir: "assets/Yaya/Devil_s Lover 2", all_images }) %>
-      <p>Lorem</p>
+      <div class="card" id="devils-lover-2">
+        <%- include("preview.ejs", { dir: "Yaya/Devil_s Lover 2", all_images })
+        %>
+        <div>
+          <h3>Devil’s Lover 2</h3>
+          <div class="info">
+            By <a href="https://www.pixiv.net/en/users/43729036">Yaya</a> •
+            2026-04-03
+          </div>
+          <p>
+            <a href="https://yayasama100lovex.booth.pm/items/8158971">Booth</a>
+          </p>
+        </div>
+      </div>
 
-      <h3 id="lonely-lose">Lonely Lose</h3>
-      <%- include("preview.ejs", { dir: "assets/Yaya/Lonely Lose", all_images }) %>
-      <p>Lorem</p>
+      <div class="card" id="lonely-lose">
+        <%- include("preview.ejs", { dir: "Yaya/Lonely Lose", all_images }) %>
+        <div>
+          <h3>Lonely Lose</h3>
+          <div class="info">
+            By <a href="https://www.pixiv.net/en/users/43729036">Yaya</a> •
+            2026-03-18
+          </div>
+          <p>
+            <a href="https://yayasama100lovex.booth.pm/items/8094931">Booth</a>
+          </p>
+        </div>
+      </div>
 
-      <h3 id="the-secret-sleepover">The Secret Sleepover</h3>
-      <%- include("preview.ejs", { dir: "assets/Yaya/The Secret Sleepover", all_images }) %>
-      <p>Lorem</p>
+      <div class="card" id="the-secret-sleepover">
+        <%- include("preview.ejs", { dir: "Yaya/The Secret Sleepover",
+        all_images }) %>
+        <div>
+          <h3>The Secret Sleepover</h3>
+          <div class="info">
+            By <a href="https://www.pixiv.net/en/users/43729036">Yaya</a> •
+            2026-03-09
+          </div>
+          <p>
+            <a href="https://yayasama100lovex.booth.pm/items/8067510">Booth</a>
+          </p>
+        </div>
+      </div>
 
-      <h3 id="wanting-more">Wanting More</h3>
-      <%- include("preview.ejs", { dir: "assets/Yaya/Wanting More", all_images }) %>
-      <p>Lorem</p>
-
-      <div id="fullscreen" class="splide" role="group">
-        <button class="fullscreen">
-          <%- include("svg/fullscreen-exit.svg") %>
-        </button>
-        <div class="splide__track">
-          <ul class="splide__list">
-            <% for (const img of all_images) { %>
-            <li class="splide__slide">
-              <img src="<%= img %>" />
-            </li>
-            <% } %>
-          </ul>
+      <div class="card" id="wanting-more">
+        <%- include("preview.ejs", { dir: "Yaya/Wanting More", all_images }) %>
+        <div>
+          <h3>Wanting More</h3>
+          <div class="info">
+            By <a href="https://www.pixiv.net/en/users/43729036">Yaya</a> •
+            2026-06-17
+          </div>
+          <p>
+            <a href="https://yayasama100lovex.booth.pm/items/8517923">Booth</a>
+          </p>
         </div>
       </div>
     </section>
+
+    <div id="fullscreen" class="splide" role="group">
+      <button class="fullscreen">
+        <%- include("svg/fullscreen-exit.svg") %>
+      </button>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <% for (const img of all_images) { %>
+          <li class="splide__slide">
+            <img src="<%= img %>" />
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
 
     <section id="about">
       <%- include("section.ejs") %>

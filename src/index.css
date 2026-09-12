@@ -41,7 +41,8 @@ header {
 
         > .splide__list > .splide__slide {
           width: 100%;
-          text-align: center;
+          display: flex;
+          justify-content: center;
           --scale: 1.03;
           /*
 		   * Because of the mask, scaling the image up will clip it, so we shrink the image a little
@@ -57,20 +58,33 @@ header {
                 var(--aspect-ratio)
             )
             0;
-          transition: scale 0.2s ease;
-          &:hover {
-            scale: var(--scale);
-          }
-          > a {
-            display: inline-block;
-            height: 100%;
-            width: auto;
-            > img {
+          > div {
+            position: relative;
+            cursor: pointer; /* counteract `pointer-events: none` on <a> */
+            > a > img {
               height: 100%;
               width: auto;
+              transition: scale 0.2s ease;
+            }
+            &:hover > a > img {
+              scale: var(--scale);
+            }
+            > .icons {
+              position: absolute;
+              top: 14px;
+              right: 14px;
+              opacity: 0.8;
+              display: flex;
+              flex-flow: row wrap;
+              gap: 8px;
+              > a > svg,
+              > a > img {
+                width: 40px;
+                height: 40px;
+              }
             }
           }
-          &:not(.is-visible) > a {
+          &:not(.is-visible) a {
             pointer-events: none;
           }
         }
@@ -79,18 +93,37 @@ header {
   }
 }
 
-.preview.splide {
-  width: 100%;
-  max-width: 300px;
-  img {
-    width: 100%;
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  &:not(:last-child) {
+    margin-bottom: 50px;
   }
-  float: left;
-  margin-bottom: 30px;
-  margin-right: 20px;
 
-  > .splide__track {
-    cursor: pointer;
+  > .preview.splide {
+    flex-grow: 1 1 150px;
+    max-width: 300px;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+    > .splide__track {
+      cursor: pointer;
+    }
+  }
+
+  > div {
+    flex: 1 1 150px;
+    > h3 {
+      margin: 0;
+    }
+    > .info {
+      a {
+        color: var(--fg);
+      }
+      opacity: 0.5;
+    }
   }
 }
 
