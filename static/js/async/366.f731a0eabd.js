@@ -1,0 +1,1 @@
+"use strict";(self.rspackChunkyuzudreams=self.rspackChunkyuzudreams||[]).push([[366],{5(s,e,u){s.exports=u.p+"static/image/Ch1p05.a8d6c97b68.webp"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.rspackChunkyuzudreams=self.rspackChunkyuzudreams||[]).push([[39],{314(s,a,e){s.exports=e.p+"static/image/fanbox.a3a81e85f7.webp"}}]);

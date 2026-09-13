@@ -1,0 +1,1 @@
+"use strict";(self.rspackChunkyuzudreams=self.rspackChunkyuzudreams||[]).push([[791],{82(s,a,e){s.exports=e.p+"static/image/logo.1ac3ef60fa.png"}}]);
