@@ -28,6 +28,6 @@ export type Translation = {
   wanting_more: string;
 
   anjinneko: string;
-  shirainu: string;
+  sirainu: string;
   yaya: string;
 };

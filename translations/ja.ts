@@ -27,6 +27,6 @@ export default translation({
   wanting_more: "もっとしたくて",
 
   anjinneko: "あんじんねこ",
-  shirainu: "しらいぬ",
+  sirainu: "しらいぬ",
   yaya: "やや様X",
 });

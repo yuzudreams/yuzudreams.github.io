@@ -27,6 +27,6 @@ export default translation({
   wanting_more: "Wanting More",
 
   anjinneko: "Anjinneko",
-  shirainu: "Shirainu",
+  sirainu: "Sirainu",
   yaya: "Yaya-samaX",
 });
